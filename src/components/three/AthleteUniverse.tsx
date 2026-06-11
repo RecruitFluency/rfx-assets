@@ -12,12 +12,12 @@ import { seeded } from "../../lib/utils";
  * ------------------------------------------------------------------ */
 
 const PALETTE = [
-  new THREE.Color("#2e8bff"), // electric
-  new THREE.Color("#5ba8ff"),
-  new THREE.Color("#ff2d3f"), // velocity
-  new THREE.Color("#ffce4d"), // gold
-  new THREE.Color("#9d6bff"), // plasma
-  new THREE.Color("#27e0a4"), // mint
+  new THREE.Color("#2e50d4"), // electric
+  new THREE.Color("#4b6eff"),
+  new THREE.Color("#c20017"), // velocity
+  new THREE.Color("#cfcfd6"), // gold
+  new THREE.Color("#2e50d4"), // plasma
+  new THREE.Color("#4b6eff"), // mint
 ];
 
 const nodeVertex = /* glsl */ `
@@ -201,7 +201,7 @@ export function AthleteUniverse() {
           camera={{ position: [0, 0, 26], fov: 62 }}
           frameloop={prefersReduced ? "demand" : "always"}
         >
-          <fog attach="fog" args={["#05060a", 22, 58]} />
+          <fog attach="fog" args={["#050505", 22, 58]} />
           <Universe count={count} reduced={reduced} />
         </Canvas>
       </div>
@@ -211,7 +211,7 @@ export function AthleteUniverse() {
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 70% 50% at 50% 38%, transparent, rgba(5,6,10,0.55) 78%, #05060a 100%)",
+            "radial-gradient(ellipse 70% 50% at 50% 38%, transparent, rgba(5,5,5,0.55) 78%, #050505 100%)",
         }}
       />
     </div>

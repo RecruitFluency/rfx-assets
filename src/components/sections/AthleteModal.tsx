@@ -77,10 +77,10 @@ export function AthleteModal({
               {/* headline metrics */}
               <div className="grid grid-cols-4 gap-3">
                 {[
-                  { k: "Match", v: athlete.matchScore, accent: "#2e8bff" },
-                  { k: "GPA", v: athlete.gpa.toFixed(2), accent: "#27e0a4" },
-                  { k: "Rank", v: athlete.nationalRank ? `#${athlete.nationalRank}` : "—", accent: "#ffce4d" },
-                  { k: "Aid Prob", v: `${athlete.scholarshipProbability}%`, accent: "#ff2d3f" },
+                  { k: "Match", v: athlete.matchScore, accent: "#2e50d4" },
+                  { k: "GPA", v: athlete.gpa.toFixed(2), accent: "#4b6eff" },
+                  { k: "Rank", v: athlete.nationalRank ? `#${athlete.nationalRank}` : "—", accent: "#cfcfd6" },
+                  { k: "Aid Prob", v: `${athlete.scholarshipProbability}%`, accent: "#c20017" },
                 ].map((m) => (
                   <div key={m.k} className="rounded-xl border border-white/8 bg-white/[0.03] p-3 text-center">
                     <div className="font-display text-xl font-700 text-white" style={{ textShadow: `0 0 18px ${m.accent}55` }}>
@@ -98,7 +98,7 @@ export function AthleteModal({
                 <div>
                   <div className="mb-1 font-mono text-[10px] uppercase tracking-widest text-silver-dim">Attribute Radar</div>
                   <div className="aspect-square">
-                    <RadarChart axes={athlete.radar} accent={athlete.accent === "#1b3b6f" ? "#2e8bff" : "#2e8bff"} />
+                    <RadarChart axes={athlete.radar} accent={athlete.accent === "#1b3b6f" ? "#2e50d4" : "#2e50d4"} />
                   </div>
                 </div>
                 <div className="flex flex-col">
@@ -134,7 +134,7 @@ export function AthleteModal({
                   <span className="chip !text-mint">+{athlete.development[athlete.development.length - 1].value - athlete.development[3].value} proj. growth</span>
                 </div>
                 <div className="h-44 rounded-xl border border-white/8 bg-black/30 p-2">
-                  <DevelopmentCurve data={athlete.development} accent="#2e8bff" />
+                  <DevelopmentCurve data={athlete.development} accent="#2e50d4" />
                 </div>
               </div>
 

@@ -42,12 +42,12 @@ export const SPORTS: Sport[] = [
 ];
 
 export const DIVISIONS = [
-  { id: "d1", label: "NCAA D-I", color: "#2e8bff" },
-  { id: "d2", label: "NCAA D-II", color: "#5ba8ff" },
-  { id: "d3", label: "NCAA D-III", color: "#27e0a4" },
-  { id: "naia", label: "NAIA", color: "#ffce4d" },
-  { id: "juco", label: "JUCO", color: "#ff5d6c" },
-  { id: "intl", label: "International", color: "#9d6bff" },
+  { id: "d1", label: "NCAA D-I", color: "#2e50d4" },
+  { id: "d2", label: "NCAA D-II", color: "#4b6eff" },
+  { id: "d3", label: "NCAA D-III", color: "#4b6eff" },
+  { id: "naia", label: "NAIA", color: "#cfcfd6" },
+  { id: "juco", label: "JUCO", color: "#e11d2a" },
+  { id: "intl", label: "International", color: "#2e50d4" },
 ] as const;
 
 export type DivisionId = (typeof DIVISIONS)[number]["id"];

@@ -7,18 +7,18 @@ import { seeded, cn } from "../../lib/utils";
  * pipeline, geography, roster gaps, and autonomous AI recommendations. */
 
 const PIPELINE = [
-  { label: "Identified", value: 1840, color: "#1a2030" },
-  { label: "Evaluated", value: 612, color: "#1f4f8f" },
-  { label: "Contacted", value: 248, color: "#2e8bff" },
-  { label: "Offered", value: 64, color: "#5ba8ff" },
-  { label: "Committed", value: 11, color: "#27e0a4" },
+  { label: "Identified", value: 1840, color: "#1c1c20" },
+  { label: "Evaluated", value: 612, color: "#243fb0" },
+  { label: "Contacted", value: 248, color: "#2e50d4" },
+  { label: "Offered", value: 64, color: "#4b6eff" },
+  { label: "Committed", value: 11, color: "#4b6eff" },
 ];
 
 const GAPS = [
-  { pos: "Center Back", need: 82, color: "#ff2d3f" },
-  { pos: "Striker", need: 64, color: "#ffce4d" },
-  { pos: "Goalkeeper", need: 41, color: "#2e8bff" },
-  { pos: "Winger", need: 28, color: "#27e0a4" },
+  { pos: "Center Back", need: 82, color: "#c20017" },
+  { pos: "Striker", need: 64, color: "#cfcfd6" },
+  { pos: "Goalkeeper", need: 41, color: "#2e50d4" },
+  { pos: "Winger", need: 28, color: "#4b6eff" },
 ];
 
 const AI_RECS = [
@@ -47,11 +47,11 @@ function HeatGrid({ active }: { active: boolean }) {
     }
   }
   const heat = (v: number) => {
-    if (v > 0.86) return "#ff2d3f";
-    if (v > 0.7) return "#ff8a3f";
-    if (v > 0.5) return "#ffce4d";
-    if (v > 0.32) return "#2e8bff";
-    return "#1a2740";
+    if (v > 0.86) return "#c20017";
+    if (v > 0.7) return "#8a0d16";
+    if (v > 0.5) return "#cfcfd6";
+    if (v > 0.32) return "#2e50d4";
+    return "#18233f";
   };
   return (
     <div
@@ -68,7 +68,7 @@ function HeatGrid({ active }: { active: boolean }) {
             key={idx}
             className="aspect-square rounded-[3px] transition-all duration-700"
             style={{
-              background: active ? heat(cell.v) : "#10141d",
+              background: active ? heat(cell.v) : "#141417",
               opacity: active ? 0.35 + cell.v * 0.65 : 0.3,
               boxShadow: active && cell.v > 0.7 ? `0 0 8px ${heat(cell.v)}` : "none",
               transitionDelay: `${idx * 6}ms`,
@@ -161,9 +161,9 @@ export function CoachWarRoom() {
               </div>
               <HeatGrid active={visible} />
               <div className="mt-4 flex items-center justify-between font-mono text-[9px] uppercase tracking-wide text-silver-dim">
-                <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-sm bg-[#1a2740]" /> Cold</span>
-                <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-sm bg-[#2e8bff]" /> Active</span>
-                <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-sm bg-[#ffce4d]" /> Warm</span>
+                <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-sm bg-[#18233f]" /> Cold</span>
+                <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-sm bg-[#2e50d4]" /> Active</span>
+                <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-sm bg-[#cfcfd6]" /> Warm</span>
                 <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-sm bg-velocity" /> Hot</span>
               </div>
             </div>

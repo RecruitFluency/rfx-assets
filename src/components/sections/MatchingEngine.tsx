@@ -22,11 +22,11 @@ interface SliderDef {
 }
 
 const SLIDERS: SliderDef[] = [
-  { key: "gpa", label: "Academic GPA", min: 2, max: 4, step: 0.05, format: (v) => v.toFixed(2), accent: "#27e0a4" },
-  { key: "athletic", label: "Athletic Composite", min: 40, max: 100, step: 1, format: (v) => `${Math.round(v)}`, accent: "#2e8bff" },
-  { key: "scholarshipNeed", label: "Scholarship Need", min: 0, max: 100, step: 1, format: (v) => `${Math.round(v)}%`, accent: "#ffce4d" },
-  { key: "academicWeight", label: "Academic Priority", min: 0, max: 100, step: 1, format: (v) => `${Math.round(v)}%`, accent: "#9d6bff" },
-  { key: "proximity", label: "Stay Close to Home", min: 0, max: 100, step: 1, format: (v) => `${Math.round(v)}%`, accent: "#ff2d3f" },
+  { key: "gpa", label: "Academic GPA", min: 2, max: 4, step: 0.05, format: (v) => v.toFixed(2), accent: "#4b6eff" },
+  { key: "athletic", label: "Athletic Composite", min: 40, max: 100, step: 1, format: (v) => `${Math.round(v)}`, accent: "#2e50d4" },
+  { key: "scholarshipNeed", label: "Scholarship Need", min: 0, max: 100, step: 1, format: (v) => `${Math.round(v)}%`, accent: "#cfcfd6" },
+  { key: "academicWeight", label: "Academic Priority", min: 0, max: 100, step: 1, format: (v) => `${Math.round(v)}%`, accent: "#2e50d4" },
+  { key: "proximity", label: "Stay Close to Home", min: 0, max: 100, step: 1, format: (v) => `${Math.round(v)}%`, accent: "#c20017" },
 ];
 
 export function MatchingEngine() {
@@ -99,9 +99,9 @@ export function MatchingEngine() {
               <svg viewBox={`0 0 ${W} ${H}`} className="h-full w-full">
                 <defs>
                   <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" stopColor="#5ba8ff" />
-                    <stop offset="60%" stopColor="#2e8bff" />
-                    <stop offset="100%" stopColor="#1f6fe0" stopOpacity="0.2" />
+                    <stop offset="0%" stopColor="#4b6eff" />
+                    <stop offset="60%" stopColor="#2e50d4" />
+                    <stop offset="100%" stopColor="#243fb0" stopOpacity="0.2" />
                   </radialGradient>
                   <filter id="soft">
                     <feGaussianBlur stdDeviation="2.2" />
@@ -136,7 +136,7 @@ export function MatchingEngine() {
                         y1={cy}
                         x2={px}
                         y2={py}
-                        stroke={isTop ? "#5ba8ff" : p.accent}
+                        stroke={isTop ? "#4b6eff" : p.accent}
                         strokeWidth={0.6 + strength * 3.4}
                         strokeOpacity={0.18 + strength * 0.6}
                         style={{ transition: "all 0.6s cubic-bezier(0.22,1,0.36,1)" }}
@@ -191,7 +191,7 @@ export function MatchingEngine() {
 
                 {/* central athlete node */}
                 <circle cx={cx} cy={cy} r="34" fill="url(#coreGlow)" filter="url(#soft)" />
-                <circle cx={cx} cy={cy} r="22" fill="#0b0e14" stroke="#5ba8ff" strokeWidth="1.5" />
+                <circle cx={cx} cy={cy} r="22" fill="#0e0e10" stroke="#4b6eff" strokeWidth="1.5" />
                 <text x={cx} y={cy - 2} textAnchor="middle" className="fill-white font-display" style={{ fontSize: 11, fontWeight: 700 }}>
                   ATHLETE
                 </text>
@@ -240,7 +240,7 @@ export function MatchingEngine() {
                         className="h-full rounded-full"
                         style={{
                           width: `${p.score}%`,
-                          background: `linear-gradient(90deg, ${p.accent}, #5ba8ff)`,
+                          background: `linear-gradient(90deg, ${p.accent}, #4b6eff)`,
                           transition: "width 0.6s cubic-bezier(0.22,1,0.36,1)",
                         }}
                       />

@@ -17,9 +17,9 @@ const CAPABILITIES = [
 // Rotating neural core — orbiting capability satellites around a pulsing brain.
 function NeuralCore() {
   const orbits = [
-    { r: 92, dur: 26, count: 6, color: "#2e8bff" },
-    { r: 132, dur: 38, count: 9, color: "#9d6bff" },
-    { r: 172, dur: 52, count: 12, color: "#ff2d3f" },
+    { r: 92, dur: 26, count: 6, color: "#2e50d4" },
+    { r: 132, dur: 38, count: 9, color: "#2e50d4" },
+    { r: 172, dur: 52, count: 12, color: "#c20017" },
   ];
   return (
     <div className="relative mx-auto aspect-square w-full max-w-[420px]">
@@ -58,7 +58,7 @@ function NeuralCore() {
       {/* core */}
       <div className="absolute inset-0 m-auto flex h-32 w-32 items-center justify-center rounded-full">
         <div className="absolute inset-0 animate-pulse-ring rounded-full border border-electric/40" />
-        <div className="glass-strong flex h-32 w-32 flex-col items-center justify-center rounded-full border border-electric/30" style={{ boxShadow: "0 0 60px -10px rgba(46,139,255,0.7)" }}>
+        <div className="glass-strong flex h-32 w-32 flex-col items-center justify-center rounded-full border border-electric/30" style={{ boxShadow: "0 0 60px -10px rgba(46,80,212,0.7)" }}>
           <img src="/assets/rfx-logo.png" alt="RFX" className="h-10 w-10 object-contain" />
           <span className="mt-1 font-display text-[11px] font-700 tracking-widest text-white">RFX</span>
           <span className="font-mono text-[7px] uppercase tracking-[0.25em] text-electric-bright">Intelligence</span>
@@ -93,7 +93,7 @@ export function AIEngine() {
           <div className={cn("transition-all duration-1000", visible ? "scale-100 opacity-100" : "scale-90 opacity-0")}>
             <NeuralCore />
             <div className="mt-6 text-center">
-              <div className="font-display text-3xl font-700 tabular-nums text-white" style={{ textShadow: "0 0 30px rgba(46,139,255,0.5)" }}>
+              <div className="font-display text-3xl font-700 tabular-nums text-white" style={{ textShadow: "0 0 30px rgba(46,80,212,0.5)" }}>
                 {proc.toLocaleString()}
               </div>
               <div className="font-mono text-[10px] uppercase tracking-widest text-silver-dim">Matches processed today · live</div>

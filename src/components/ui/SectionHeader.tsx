@@ -29,7 +29,7 @@ export function SectionHeader({
         <span className="eyebrow">{eyebrow}</span>
         <span className="h-px w-8 bg-gradient-to-l from-transparent to-electric" />
       </div>
-      <h2 className="font-display text-[clamp(1.9rem,5vw,3.4rem)] font-700 leading-[1.05] tracking-[-0.02em] text-white text-balance">
+      <h2 className="font-display text-[clamp(1.9rem,5vw,3.4rem)] font-800 leading-[1.05] tracking-[-0.02em] text-white text-balance">
         {title} {accent && <span className="text-gradient-fire">{accent}</span>}
       </h2>
       {description && (

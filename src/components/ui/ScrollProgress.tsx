@@ -25,8 +25,8 @@ export function ScrollProgress() {
         className="h-full origin-left"
         style={{
           transform: `scaleX(${progress})`,
-          background: "linear-gradient(90deg,#2e8bff,#9d6bff 50%,#ff2d3f)",
-          boxShadow: "0 0 12px rgba(46,139,255,0.7)",
+          background: "linear-gradient(90deg,#2e50d4,#2e50d4 50%,#c20017)",
+          boxShadow: "0 0 12px rgba(46,80,212,0.7)",
           transition: "transform 0.1s linear",
         }}
       />

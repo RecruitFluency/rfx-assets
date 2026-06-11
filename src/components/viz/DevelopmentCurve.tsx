@@ -5,7 +5,7 @@ import type { TimelinePoint } from "../../data/athletes";
 // confidence band — Formula-1 telemetry energy.
 export function DevelopmentCurve({
   data,
-  accent = "#2e8bff",
+  accent = "#2e50d4",
   height = 180,
 }: {
   data: TimelinePoint[];
@@ -85,7 +85,7 @@ export function DevelopmentCurve({
         const isProj = i > splitIndex;
         return (
           <g key={i}>
-            <circle cx={p[0]} cy={p[1]} r={isProj ? 3 : 3.5} fill={isProj ? "#fff" : accent} stroke="#0b0e14" strokeWidth={1.5} />
+            <circle cx={p[0]} cy={p[1]} r={isProj ? 3 : 3.5} fill={isProj ? "#fff" : accent} stroke="#0e0e10" strokeWidth={1.5} />
             <text x={p[0]} y={H - 6} textAnchor="middle" className="fill-silver-dim font-mono" style={{ fontSize: 8 }}>
               {data[i].label}
             </text>

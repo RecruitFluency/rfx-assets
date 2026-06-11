@@ -10,12 +10,12 @@ gsap.registerPlugin(ScrollTrigger);
  * its imagery and reveals its copy. */
 
 const CHAPTERS = [
-  { phase: "01", title: "Talent", copy: "It starts with raw ability — captured, verified, and vectorized into the network.", img: "/assets/founder-dark.jpeg", accent: "#2e8bff" },
-  { phase: "02", title: "Potential", copy: "RFX models what an athlete will become, not just what they are today.", img: "/assets/athletes/academy-duo.jpeg", accent: "#9d6bff" },
-  { phase: "03", title: "Discovery", copy: "The right coach finds the right athlete — out of millions, in milliseconds.", img: "/assets/stadium-hero.webp", accent: "#27e0a4" },
-  { phase: "04", title: "Connection", copy: "Vectorized pathways light up. Behavioral, academic, and athletic fit align.", img: "/assets/athletes/roster-trio.jpeg", accent: "#ffce4d" },
-  { phase: "05", title: "Opportunity", copy: "Scholarship probabilities resolve. The pathway becomes a real decision.", img: "/assets/athletes/nerlyn-munoz.jpeg", accent: "#ff5d6c" },
-  { phase: "06", title: "Commitment", copy: "Talent meets opportunity. A commitment is made — and the legacy begins.", img: "/assets/athletes/foster-hayes.jpeg", accent: "#ff2d3f" },
+  { phase: "01", title: "Talent", copy: "It starts with raw ability — captured, verified, and vectorized into the network.", img: "/assets/founder-dark.jpeg", accent: "#2e50d4" },
+  { phase: "02", title: "Potential", copy: "RFX models what an athlete will become, not just what they are today.", img: "/assets/athletes/academy-duo.jpeg", accent: "#2e50d4" },
+  { phase: "03", title: "Discovery", copy: "The right coach finds the right athlete — out of millions, in milliseconds.", img: "/assets/stadium-hero.webp", accent: "#4b6eff" },
+  { phase: "04", title: "Connection", copy: "Vectorized pathways light up. Behavioral, academic, and athletic fit align.", img: "/assets/athletes/roster-trio.jpeg", accent: "#cfcfd6" },
+  { phase: "05", title: "Opportunity", copy: "Scholarship probabilities resolve. The pathway becomes a real decision.", img: "/assets/athletes/nerlyn-munoz.jpeg", accent: "#e11d2a" },
+  { phase: "06", title: "Commitment", copy: "Talent meets opportunity. A commitment is made — and the legacy begins.", img: "/assets/athletes/foster-hayes.jpeg", accent: "#c20017" },
 ];
 
 export function Storytelling() {
@@ -78,7 +78,7 @@ export function Storytelling() {
             <span className="eyebrow !text-velocity-bright">The RFX Journey</span>
             <span className="h-px w-8 bg-gradient-to-l from-transparent to-velocity" />
           </div>
-          <h2 className="font-display text-[clamp(1.9rem,5vw,3.4rem)] font-700 leading-[1.05] tracking-[-0.02em] text-white">
+          <h2 className="font-display text-[clamp(1.9rem,5vw,3.4rem)] font-800 leading-[1.05] tracking-[-0.02em] text-white">
             Every athlete has a path.
             <br />
             <span className="text-gradient-fire">We illuminate it.</span>
@@ -98,9 +98,9 @@ export function Storytelling() {
             />
             <defs>
               <linearGradient id="spineGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#2e8bff" />
-                <stop offset="50%" stopColor="#9d6bff" />
-                <stop offset="100%" stopColor="#ff2d3f" />
+                <stop offset="0%" stopColor="#2e50d4" />
+                <stop offset="50%" stopColor="#2e50d4" />
+                <stop offset="100%" stopColor="#c20017" />
               </linearGradient>
             </defs>
           </svg>

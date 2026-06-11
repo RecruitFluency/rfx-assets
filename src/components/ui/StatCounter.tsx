@@ -8,7 +8,7 @@ export function StatCounter({
   suffix = "",
   decimals = 0,
   label,
-  accent = "#2e8bff",
+  accent = "#2e50d4",
 }: {
   value: number;
   prefix?: string;

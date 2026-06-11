@@ -3,10 +3,10 @@ import { gsap } from "gsap";
 import { usePointer } from "../../hooks/useInteractions";
 
 const FLOATERS = [
-  { label: "Live Athletes", value: "2.7M", accent: "#2e8bff", x: "8%", y: "26%", delay: 0 },
-  { label: "Programs", value: "14,820", accent: "#ffce4d", x: "82%", y: "20%", delay: 0.15 },
-  { label: "AI Matches / day", value: "918K", accent: "#27e0a4", x: "86%", y: "62%", delay: 0.3 },
-  { label: "Avg Match Score", value: "94.2", accent: "#ff2d3f", x: "6%", y: "66%", delay: 0.45 },
+  { label: "Live Athletes", value: "2.7M", accent: "#2e50d4", x: "8%", y: "26%", delay: 0 },
+  { label: "Programs", value: "14,820", accent: "#cfcfd6", x: "82%", y: "20%", delay: 0.15 },
+  { label: "AI Matches / day", value: "918K", accent: "#4b6eff", x: "86%", y: "62%", delay: 0.3 },
+  { label: "Avg Match Score", value: "94.2", accent: "#c20017", x: "6%", y: "66%", delay: 0.45 },
 ];
 
 export function Hero() {
@@ -59,12 +59,12 @@ export function Hero() {
           </span>
         </div>
 
-        <h1 className="mx-auto max-w-5xl font-display text-[clamp(2.6rem,8vw,6.2rem)] font-700 leading-[0.95] tracking-[-0.03em]">
+        <h1 className="mx-auto max-w-5xl font-display text-[clamp(2.6rem,8vw,6.2rem)] font-800 leading-[0.95] tracking-[-0.03em]">
           <span className="block overflow-hidden">
             <span className="hero-line block text-gradient-steel">Where Talent</span>
           </span>
           <span className="block overflow-hidden">
-            <span className="hero-line block text-gradient-electric">Meets Opportunity.</span>
+            <span className="hero-line block text-gradient-fire">Meets Opportunity.</span>
           </span>
         </h1>
 

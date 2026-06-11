@@ -5,7 +5,7 @@ import type { RadarAxis } from "../../data/athletes";
 export function RadarChart({
   axes,
   size = 240,
-  accent = "#2e8bff",
+  accent = "#2e50d4",
 }: {
   axes: RadarAxis[];
   size?: number;

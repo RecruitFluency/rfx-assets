@@ -62,19 +62,19 @@ export function CustomCursor() {
         ref={ring}
         className="absolute -ml-5 -mt-5 h-10 w-10 rounded-full border transition-[width,height,opacity,border-color] duration-200"
         style={{
-          borderColor: hovering ? "rgba(46,139,255,0.9)" : "rgba(199,206,217,0.35)",
+          borderColor: hovering ? "rgba(46,80,212,0.9)" : "rgba(212,212,216,0.35)",
           width: hovering ? 56 : 40,
           height: hovering ? 56 : 40,
           marginLeft: hovering ? -28 : -20,
           marginTop: hovering ? -28 : -20,
-          boxShadow: hovering ? "0 0 24px -4px rgba(46,139,255,0.7)" : "none",
+          boxShadow: hovering ? "0 0 24px -4px rgba(46,80,212,0.7)" : "none",
           opacity: down ? 0.5 : 1,
         }}
       />
       <div
         ref={dot}
         className="absolute -ml-[3px] -mt-[3px] h-1.5 w-1.5 rounded-full bg-electric-bright"
-        style={{ boxShadow: "0 0 12px rgba(46,139,255,0.9)" }}
+        style={{ boxShadow: "0 0 12px rgba(46,80,212,0.9)" }}
       />
     </div>
   );

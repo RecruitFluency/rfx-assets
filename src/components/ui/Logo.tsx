@@ -19,7 +19,7 @@ export function Logo({
         <img
           src="/assets/rfx-logo.png"
           alt="RFX"
-          className="relative h-9 w-9 object-contain drop-shadow-[0_0_10px_rgba(255,45,63,0.5)]"
+          className="relative h-9 w-9 object-contain drop-shadow-[0_0_10px_rgba(194,0,23,0.5)]"
         />
       </span>
       {!compact && (
