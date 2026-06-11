@@ -6,6 +6,9 @@ dist/
 dist-ssr/
 *.local
 
+# Netlify CLI local state
+.netlify/
+
 # TypeScript build artifacts
 *.tsbuildinfo
 vite.config.js
