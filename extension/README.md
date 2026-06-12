@@ -21,8 +21,11 @@ saved profile — no copy/paste, no retyping.
 
 Personal • contact • address • academics (GPA, SAT/ACT, NCAA Eligibility Center
 ID, intended major) • athletics (sport, position, height, weight, dominant
-foot/hand, jersey #) • club & high-school teams and coaches • parent/guardian
-contacts • recruiting media (Hudl/YouTube highlight link, social handles).
+foot/hand, jersey #) • sport-specific measurables (40-yard dash, vertical/broad
+jump, pro agility, bench, exit/throwing/pitching velocity, wingspan, standing
+reach, approach touch, best events & times — fill only what applies to your
+sport) • club & high-school teams and coaches • parent/guardian contacts •
+recruiting media (Hudl/YouTube highlight link, social handles).
 
 It is smart about the things that trip up generic autofillers:
 

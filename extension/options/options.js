@@ -6,7 +6,7 @@ const form = document.getElementById("profileForm");
 
 // Fields a coach's form treats as long text get a wide layout.
 const WIDE_KEYS = new Set([
-  "address1", "highSchool", "clubTeamName", "highlightVideoUrl", "personalWebsite", "intendedMajor"
+  "address1", "highSchool", "clubTeamName", "highlightVideoUrl", "personalWebsite", "intendedMajor", "bestEvents"
 ]);
 
 function fieldControl(field) {

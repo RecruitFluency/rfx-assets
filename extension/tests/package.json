@@ -4,7 +4,7 @@
   "private": true,
   "description": "jsdom tests for the RecruitFill matching/fill engine",
   "scripts": {
-    "test": "node form-fill.test.js && node behaviors.test.js"
+    "test": "node form-fill.test.js && node behaviors.test.js && node metrics.test.js"
   },
   "devDependencies": {
     "jsdom": "^24.0.0"
