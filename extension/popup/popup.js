@@ -1,4 +1,4 @@
-/* RecruitFill — popup logic */
+/* RFX RecruitRush — popup logic */
 
 const fillBtn = document.getElementById("fillBtn");
 const statusEl = document.getElementById("status");

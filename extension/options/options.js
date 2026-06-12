@@ -1,4 +1,4 @@
-/* RecruitFill — options page: render the profile form from the schema, persist to storage. */
+/* RFX RecruitRush — options page: render the profile form from the schema, persist to storage. */
 
 const SCHEMA = window.RECRUIT_SCHEMA;
 const GROUPS = window.RECRUIT_GROUPS;

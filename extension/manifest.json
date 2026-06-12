@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "RecruitFill — College Recruiting Form Autofiller",
+  "name": "RFX RecruitRush — College Recruiting Form Autofiller",
   "version": "1.0.0",
   "description": "Save your athlete recruiting profile once, then autofill any college coach's recruiting questionnaire with one click.",
   "icons": {
@@ -10,7 +10,7 @@
   },
   "action": {
     "default_popup": "popup/popup.html",
-    "default_title": "RecruitFill — autofill this recruiting form",
+    "default_title": "RFX RecruitRush — autofill this recruiting form",
     "default_icon": {
       "16": "icons/icon16.png",
       "48": "icons/icon48.png",

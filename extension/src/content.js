@@ -1,5 +1,5 @@
 /*
- * RecruitFill — content script (fill engine)
+ * RFX RecruitRush — content script (fill engine)
  *
  * Runs in every frame. Exposes window.__recruitFillRun() which the popup,
  * keyboard command, and context menu invoke via chrome.scripting.executeScript

@@ -1,5 +1,5 @@
 /*
- * RecruitFill — background service worker
+ * RFX RecruitRush — background service worker
  *
  * Wires up the keyboard command (Alt+Shift+F) and the right-click context menu,
  * and runs the fill across all frames of the active tab, reporting a count on
@@ -47,7 +47,7 @@ async function flashBadge(text, color, tabId) {
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
     id: "recruitfill-fill",
-    title: "Autofill recruiting form with RecruitFill",
+    title: "Autofill recruiting form with RFX RecruitRush",
     contexts: ["page", "editable"]
   });
   chrome.contextMenus.create({

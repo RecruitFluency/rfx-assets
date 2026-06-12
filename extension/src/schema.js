@@ -1,5 +1,5 @@
 /*
- * RecruitFill — field schema
+ * RFX RecruitRush — field schema
  *
  * This is the brain of the autofiller. Every college recruiting questionnaire
  * uses different field `name`/`id` attributes, but the *visible* labels are

@@ -1,4 +1,4 @@
-# RecruitFill — College Recruiting Form Autofiller
+# RFX RecruitRush — College Recruiting Form Autofiller
 
 Fill out your athlete recruiting profile **once**, then autofill every college
 coach's recruiting questionnaire with a single click (or `Alt+Shift+F`).
@@ -6,7 +6,7 @@ coach's recruiting questionnaire with a single click (or `Alt+Shift+F`).
 Every college sports program has its own questionnaire, and recruits fill these
 out by the dozen. The field *names* differ from school to school, but the
 visible *labels* ("First Name", "Graduation Year", "Club Coach Email", "Highlight
-Video") are fairly standard. RecruitFill reads those labels and maps them to your
+Video") are fairly standard. RFX RecruitRush reads those labels and maps them to your
 saved profile — no copy/paste, no retyping.
 
 > **Why this exists:** general autofillers (Magical, JunkFill) don't understand
@@ -63,12 +63,12 @@ the options page to back it up to a JSON file, and **Import** to restore it.
 2. Go to `chrome://extensions` (or `edge://extensions`).
 3. Turn on **Developer mode** (top-right).
 4. Click **Load unpacked** and select the `extension/` folder.
-5. Pin the RecruitFill icon, click it, and choose **Edit profile** to fill in
+5. Pin the RFX RecruitRush icon, click it, and choose **Edit profile** to fill in
    your info once. Then open any recruiting questionnaire and click **Fill this
    form**.
 
 Keyboard shortcut: **`Alt+Shift+F`**. Right-click a page → *Autofill recruiting
-form with RecruitFill*.
+form with RFX RecruitRush*.
 
 ## Install in Safari (macOS, requires Xcode)
 
@@ -81,7 +81,7 @@ native app wrapper):
 xcrun safari-web-extension-converter /path/to/rfx-assets/extension
 ```
 
-This opens an Xcode project. Build & run it, then enable **RecruitFill** in
+This opens an Xcode project. Build & run it, then enable **RFX RecruitRush** in
 Safari → Settings → Extensions. (For iOS Safari, the same converter can target an
 iOS app; allow it under Settings → Safari → Extensions.) See Apple's
 ["Converting a web extension for Safari"](https://developer.apple.com/documentation/safariservices/safari_web_extensions/converting_a_web_extension_for_safari)
