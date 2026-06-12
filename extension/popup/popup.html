@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="popup.css" />
+  <title>RecruitFill</title>
+</head>
+<body>
+  <header>
+    <img src="../icons/icon48.png" alt="" class="logo" />
+    <div>
+      <h1>RecruitFill</h1>
+      <p class="tagline">Autofill recruiting questionnaires</p>
+    </div>
+  </header>
+
+  <div id="profileWarning" class="warning hidden">
+    Your profile looks empty. <a href="#" id="setupLink">Set it up first →</a>
+  </div>
+
+  <button id="fillBtn" class="primary">Fill this form</button>
+  <p id="status" class="status"></p>
+
+  <div class="options">
+    <label class="toggle">
+      <input type="checkbox" id="overwrite" />
+      <span>Overwrite fields that already have a value</span>
+    </label>
+    <label class="toggle">
+      <input type="checkbox" id="highlight" checked />
+      <span>Highlight filled fields</span>
+    </label>
+  </div>
+
+  <footer>
+    <a href="#" id="editProfile">Edit profile</a>
+    <span class="shortcut">Shortcut: <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd></span>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
