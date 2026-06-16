@@ -13,6 +13,12 @@ function openOptions(e) {
 document.getElementById("editProfile").addEventListener("click", openOptions);
 document.getElementById("setupLink").addEventListener("click", openOptions);
 
+// Wire the "Get the RFX app" store links with campaign tracking.
+if (window.RFX_CONFIG) {
+  document.getElementById("iosBtn").href = window.RFX_CONFIG.storeLink("ios", "popup");
+  document.getElementById("playBtn").href = window.RFX_CONFIG.storeLink("android", "popup");
+}
+
 // Load saved settings + warn if profile is empty.
 (async function init() {
   const { settings, profile } = await chrome.storage.local.get(["settings", "profile"]);

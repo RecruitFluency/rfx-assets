@@ -4,7 +4,7 @@
   "private": true,
   "description": "jsdom tests for the RFX RecruitRush matching/fill engine",
   "scripts": {
-    "test": "node form-fill.test.js && node behaviors.test.js && node metrics.test.js"
+    "test": "node form-fill.test.js && node behaviors.test.js && node metrics.test.js && node marketing.test.js"
   },
   "devDependencies": {
     "jsdom": "^24.0.0"

@@ -44,7 +44,7 @@ async function flashBadge(text, color, tabId) {
   } catch (e) { /* tab may be gone */ }
 }
 
-chrome.runtime.onInstalled.addListener(() => {
+chrome.runtime.onInstalled.addListener((details) => {
   chrome.contextMenus.create({
     id: "recruitfill-fill",
     title: "Autofill recruiting form with RFX RecruitRush",
@@ -55,6 +55,10 @@ chrome.runtime.onInstalled.addListener(() => {
     title: "Edit my recruiting profile…",
     contexts: ["action"]
   });
+  // First install: open the welcome page that introduces the RFX app.
+  if (details.reason === "install") {
+    chrome.tabs.create({ url: chrome.runtime.getURL("welcome/welcome.html") });
+  }
 });
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {

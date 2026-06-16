@@ -95,7 +95,7 @@ document.getElementById("exportBtn").addEventListener("click", () => {
   const blob = new Blob([data], { type: "application/json" });
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
-  a.download = "recruitfill-profile.json";
+  a.download = "rfx-recruitrush-profile.json";
   a.click();
   URL.revokeObjectURL(a.href);
 });
@@ -119,6 +119,12 @@ document.getElementById("importFile").addEventListener("change", (e) => {
   };
   reader.readAsText(file);
 });
+
+// App CTA links with campaign tracking.
+if (window.RFX_CONFIG) {
+  document.getElementById("iosBtn").href = window.RFX_CONFIG.storeLink("ios", "options");
+  document.getElementById("playBtn").href = window.RFX_CONFIG.storeLink("android", "options");
+}
 
 render();
 load();

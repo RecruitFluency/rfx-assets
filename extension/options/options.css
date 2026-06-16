@@ -34,5 +34,14 @@ button.ghost:hover { border-color: var(--blue); color: var(--blue); }
 .field input, .field select { width: 100%; padding: 9px 10px; border: 1px solid var(--border);
   border-radius: 8px; font-size: 14px; font-family: inherit; background: #fff; color: var(--navy); }
 .field input:focus, .field select:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(31,111,235,.12); }
+.appbanner { display: flex; align-items: center; gap: 16px; justify-content: space-between;
+  background: linear-gradient(135deg, #11305a, var(--navy)); color: #fff;
+  border-radius: 14px; padding: 16px 18px; margin-top: 18px; font-size: 14px; line-height: 1.5; }
+.appbanner-buttons { display: flex; gap: 10px; flex-shrink: 0; }
+.appbanner .store { text-decoration: none; font-size: 13px; font-weight: 600; padding: 9px 14px; border-radius: 9px; white-space: nowrap; }
+.appbanner .store.ios { background: #fff; color: var(--navy); }
+.appbanner .store.play { background: rgba(255,255,255,.12); color: #fff; border: 1px solid rgba(255,255,255,.35); }
+.appbanner .store:hover { opacity: .92; }
+@media (max-width: 620px) { .appbanner { flex-direction: column; align-items: flex-start; } }
 .privacy { font-size: 12.5px; color: var(--muted); margin-top: 22px; line-height: 1.5; }
 @media (max-width: 620px) { .fields { grid-template-columns: 1fr; } }

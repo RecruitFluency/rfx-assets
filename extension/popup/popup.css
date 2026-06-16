@@ -51,3 +51,14 @@ kbd {
 .warning { background: #fff7e6; border: 1px solid #ffe2a8; color: #8a5a00; font-size: 12.5px; padding: 9px 10px; border-radius: 8px; margin-bottom: 12px; }
 .warning a { color: #8a5a00; font-weight: 700; }
 .hidden { display: none; }
+
+.appcta { margin-top: 12px; padding: 12px; border-radius: 12px;
+  background: linear-gradient(135deg, #11305a, var(--navy)); color: #fff; }
+.appcta-title { margin: 0 0 2px; font-size: 13.5px; font-weight: 700; }
+.appcta-title em { color: #ff5a5a; font-style: normal; }
+.appcta-sub { margin: 0 0 10px; font-size: 11.5px; color: #c5d2e6; }
+.appcta-buttons { display: flex; gap: 8px; }
+.store { flex: 1; text-align: center; text-decoration: none; font-size: 12px; font-weight: 600; padding: 8px 6px; border-radius: 8px; }
+.store.ios { background: #fff; color: var(--navy); }
+.store.play { background: rgba(255,255,255,.12); color: #fff; border: 1px solid rgba(255,255,255,.35); }
+.store:hover { opacity: .92; }

@@ -206,7 +206,71 @@
       }
     }
 
+    if (result.filled > 0) {
+      try { showRfxToast(result.filled); } catch (e) { /* never block the fill */ }
+    }
     return result;
+  }
+
+  // Branded post-fill toast that converts the "I just saved time" moment into a
+  // nudge to build a profile on the RFX app. Rendered in a Shadow DOM so the
+  // host page's CSS can't break it, only shown in the top frame, dismissible,
+  // and rate-limited to once per page view.
+  function showRfxToast(count) {
+    if (window.top !== window) return;            // top frame only
+    if (window.__rfxToastShown) return;
+    if (!document.body) return;
+    const CFG = window.RFX_CONFIG;
+    if (!CFG) return;
+    window.__rfxToastShown = true;
+
+    const host = document.createElement("div");
+    host.style.cssText = "all: initial; position: fixed; z-index: 2147483647; bottom: 20px; right: 20px;";
+    const root = host.attachShadow({ mode: "open" });
+    const ios = CFG.storeLink("ios", "toast");
+    const play = CFG.storeLink("android", "toast");
+    const logo = chrome.runtime.getURL("icons/icon48.png");
+    root.innerHTML = `
+      <style>
+        :host { all: initial; }
+        .card { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+          width: 320px; background: #fff; color: #0b2545; border-radius: 14px;
+          box-shadow: 0 12px 40px rgba(0,0,0,.28); overflow: hidden; animation: rise .25s ease; }
+        @keyframes rise { from { transform: translateY(12px); opacity: 0; } to { transform: none; opacity: 1; } }
+        .top { display: flex; align-items: center; gap: 10px; padding: 14px 14px 8px; }
+        .top img { width: 34px; height: 34px; border-radius: 8px; }
+        .t1 { font-weight: 700; font-size: 14px; }
+        .t2 { font-size: 12px; color: #18a957; font-weight: 600; }
+        .body { padding: 0 14px 12px; font-size: 12.5px; color: #475467; line-height: 1.45; }
+        .cta { display: flex; gap: 8px; padding: 0 14px 14px; }
+        .cta a { flex: 1; text-align: center; text-decoration: none; font-size: 12px; font-weight: 600;
+          padding: 9px 6px; border-radius: 9px; }
+        .ios { background: #0b2545; color: #fff; }
+        .play { background: #fff; color: #0b2545; border: 1px solid #d0d5dd; }
+        .x { position: absolute; top: 8px; right: 10px; cursor: pointer; border: none; background: transparent;
+          font-size: 16px; color: #98a2b3; line-height: 1; }
+        .wrap { position: relative; }
+      </style>
+      <div class="wrap">
+        <button class="x" aria-label="Close">&times;</button>
+        <div class="card">
+          <div class="top">
+            <img src="${logo}" alt="">
+            <div>
+              <div class="t1">RFX RecruitRush</div>
+              <div class="t2">✓ Autofilled ${count} field${count === 1 ? "" : "s"}</div>
+            </div>
+          </div>
+          <div class="body">Filling forms one by one? Build your profile <b>once</b> on the RFX app and let coaches find <b>you</b>.</div>
+          <div class="cta">
+            <a class="ios" href="${ios}" target="_blank" rel="noopener">App Store</a>
+            <a class="play" href="${play}" target="_blank" rel="noopener">Google Play</a>
+          </div>
+        </div>
+      </div>`;
+    root.querySelector(".x").addEventListener("click", () => host.remove());
+    document.body.appendChild(host);
+    setTimeout(() => host.remove(), 12000);
   }
 
   // Expose for executeScript-based invocation and message-based fallback.

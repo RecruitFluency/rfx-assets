@@ -57,6 +57,44 @@ the options page to back it up to a JSON file, and **Import** to restore it.
 
 ---
 
+## Growth: driving athletes to the RFX app
+
+The extension doubles as a top-of-funnel growth channel for the RFX recruiting
+app. It's a free, ungated tool (max installs) that converts the "I just saved
+time" moment into app downloads, with campaign tracking so installs are
+measurable. All links/copy live in [`src/config.js`](src/config.js).
+
+Touchpoints:
+
+- **First-run welcome page** (`welcome/`) opens on install — pitches the RFX app
+  with App Store + Google Play buttons and **QR codes** (desktop → phone handoff,
+  since athletes fill forms on a laptop but the product is on their phone).
+- **Post-fill toast** (`src/content.js`) — after every autofill, a branded,
+  dismissible card nudges: *"Filling forms one by one? Build your profile once on
+  the RFX app."* This is the highest-frequency touchpoint (fires per form).
+- **Popup + options CTAs** — "Let coaches find *you*" with tracked store buttons.
+
+**Attribution:** App Store links carry `?ct=recruitrush_ext_<placement>`; Google
+Play links carry a `referrer` UTM blob (`utm_source=recruitrush_ext`). Placement
+tags (`welcome`/`popup`/`toast`/`options`) tell you which CTA drove each install
+in App Store Connect / Play Console.
+
+### Tier 3 — "Sign in with RFX" two-way sync (when a web API exists)
+
+True profile sync (import the athlete's profile from RFX, push updates back) needs
+the RFX platform to expose a **web API / OAuth endpoint** the browser can call —
+the current product is a mobile app, so this isn't wired yet. The adapter is
+stubbed and feature-flagged off in `src/config.js`:
+
+```js
+sync: { enabled: false, apiBaseUrl: "", authUrl: "" }
+```
+
+When the API is ready, set `enabled: true` + the URLs and the "Sign in with RFX"
+flow lights up — no other rewiring needed.
+
+---
+
 ## Install in Chrome / Edge / Brave (developer mode)
 
 1. Download or clone this repo.
@@ -93,13 +131,15 @@ guide for distribution details.
 
 ```
 manifest.json          Manifest V3 config (Chrome + Safari compatible)
+src/config.js          Platform links, campaign tracking, feature-flagged sync adapter
 src/schema.js          Field definitions: labels, types, and match synonyms/anti-words
 src/matcher.js         Builds a text "signature" per form field and scores it vs. the schema
-src/content.js         The fill engine (runs in every frame), React/Vue-safe value setting
-src/background.js      Keyboard command, context menu, multi-frame fill + toolbar badge
-options/               "My Recruiting Profile" editor (save / export / import)
-popup/                 One-click "Fill this form" + settings
-tests/                 jsdom tests for the matching engine (see below)
+src/content.js         The fill engine (runs in every frame) + branded post-fill toast
+src/background.js      Keyboard command, context menu, multi-frame fill, opens welcome page
+options/               "My Recruiting Profile" editor (save / export / import) + app CTA
+popup/                 One-click "Fill this form" + settings + app CTA
+welcome/               First-run page that drives installs of the RFX app
+tests/                 jsdom tests for the engine + marketing touchpoints (see below)
 ```
 
 The matcher prefers reliable, field-specific text (explicit `<label>`, ARIA,
