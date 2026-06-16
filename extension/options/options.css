@@ -1,13 +1,16 @@
 :root {
-  --navy: #0b2545;
-  --blue: #1f6feb;
+  --jet: #000000;
+  --matte: #1a1a1a;
+  --red: #ff0000;
+  --red-dark: #d40000;
+  --ink: #0a0a0a;
   --green: #18a957;
-  --muted: #667085;
+  --muted: #6b6b6f;
   --border: #e4e7ec;
-  --bg: #f5f7fb;
+  --bg: #f5f6f7;
 }
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--navy);
+body { margin: 0; background: var(--bg); color: var(--ink);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
 .page { max-width: 880px; margin: 0 auto; padding: 28px 20px 60px; }
 header { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
@@ -19,28 +22,28 @@ h1 { margin: 0; font-size: 24px; letter-spacing: -0.4px; }
 .toolbar.bottom { position: static; border-bottom: none; border-top: 1px solid var(--border); margin-top: 8px; }
 .spacer { flex: 1; }
 button { font-family: inherit; cursor: pointer; border-radius: 9px; font-size: 14px; }
-button.primary { background: linear-gradient(135deg, var(--blue), var(--navy)); color: #fff;
-  border: none; padding: 10px 20px; font-weight: 600; }
-button.primary:hover { opacity: .95; }
-button.ghost { background: #fff; border: 1px solid var(--border); color: var(--navy); padding: 9px 14px; }
-button.ghost:hover { border-color: var(--blue); color: var(--blue); }
+button.primary { background: var(--red); color: #fff;
+  border: none; padding: 10px 20px; font-weight: 700; }
+button.primary:hover { background: var(--red-dark); }
+button.ghost { background: #fff; border: 1px solid var(--border); color: var(--ink); padding: 9px 14px; }
+button.ghost:hover { border-color: var(--red); color: var(--red); }
 .save-status { font-size: 13px; color: var(--green); font-weight: 600; }
 .group { background: #fff; border: 1px solid var(--border); border-radius: 14px;
   padding: 18px 20px; margin-top: 18px; }
 .group h2 { margin: 0 0 14px; font-size: 16px; }
 .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 18px; }
 .field.wide { grid-column: 1 / -1; }
-.field label { display: block; font-size: 12.5px; font-weight: 600; color: #344054; margin-bottom: 5px; }
+.field label { display: block; font-size: 12.5px; font-weight: 600; color: #2b2b2e; margin-bottom: 5px; }
 .field input, .field select { width: 100%; padding: 9px 10px; border: 1px solid var(--border);
-  border-radius: 8px; font-size: 14px; font-family: inherit; background: #fff; color: var(--navy); }
-.field input:focus, .field select:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(31,111,235,.12); }
+  border-radius: 8px; font-size: 14px; font-family: inherit; background: #fff; color: var(--ink); }
+.field input:focus, .field select:focus { outline: none; border-color: var(--red); box-shadow: 0 0 0 3px rgba(255,0,0,.12); }
 .appbanner { display: flex; align-items: center; gap: 16px; justify-content: space-between;
-  background: linear-gradient(135deg, #11305a, var(--navy)); color: #fff;
+  background: linear-gradient(135deg, var(--matte), var(--jet)); color: #fff;
   border-radius: 14px; padding: 16px 18px; margin-top: 18px; font-size: 14px; line-height: 1.5; }
 .appbanner-buttons { display: flex; gap: 10px; flex-shrink: 0; }
-.appbanner .store { text-decoration: none; font-size: 13px; font-weight: 600; padding: 9px 14px; border-radius: 9px; white-space: nowrap; }
-.appbanner .store.ios { background: #fff; color: var(--navy); }
-.appbanner .store.play { background: rgba(255,255,255,.12); color: #fff; border: 1px solid rgba(255,255,255,.35); }
+.appbanner .store { text-decoration: none; font-size: 13px; font-weight: 700; padding: 9px 14px; border-radius: 9px; white-space: nowrap; }
+.appbanner .store.ios { background: var(--red); color: #fff; }
+.appbanner .store.play { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.45); }
 .appbanner .store:hover { opacity: .92; }
 @media (max-width: 620px) { .appbanner { flex-direction: column; align-items: flex-start; } }
 .privacy { font-size: 12.5px; color: var(--muted); margin-top: 22px; line-height: 1.5; }
